@@ -1,4 +1,3 @@
-// pages/_app.js
 import '../styles/globals.css';
 import { Tenor_Sans, Rubik } from 'next/font/google';
 
@@ -9,7 +8,7 @@ const tenorSans = Tenor_Sans({
 });
 
 const rubik = Rubik({
-  weight: '300', // puedes especificar otros pesos si los necesitas
+  weight: '300',
   subsets: ['latin'],
   display: 'swap',
 });
