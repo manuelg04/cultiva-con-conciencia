@@ -1,5 +1,23 @@
-import '../styles/globals.css'
+// pages/_app.js
+import '../styles/globals.css';
+import { Tenor_Sans, Rubik } from 'next/font/google';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />
+const tenorSans = Tenor_Sans({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+const rubik = Rubik({
+  weight: '300', // puedes especificar otros pesos si los necesitas
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <main className={`${tenorSans.className} ${rubik.className}`}>
+      <Component {...pageProps} />
+    </main>
+  );
 }
