@@ -1,14 +1,18 @@
 import React from 'react';
-import { LandingPage } from '../../@/components/component/landing-page';
-import Link from "next/link"
-import { CarouselItem, CarouselContent, CarouselPrevious, CarouselNext, Carousel } from "../../@/components/ui/carousel"
-import { Input } from "../../@/components/ui/input"
-import { Button } from "../../@/components/ui/button"
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import LostFood from '../components/LostFood';
+import Footer from '../components/Footer';
 
 const IndexPage = () => {
   return (
-    <div>
-      <LandingPage />
+    <div className="flex flex-col min-h-screen">
+      <Navbar />
+      <main className="flex-grow">
+        <Hero />
+        <LostFood />
+      </main>
+      <Footer />
     </div>
   );
 };
